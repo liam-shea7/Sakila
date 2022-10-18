@@ -1,0 +1,21 @@
+1. SELECT * FROM sakila.actor 
+2. SELECT * FROM sakila.actor WHERE first_name = 'John' 
+3. SELECT * FROM sakila.actor WHERE last_name = 'Neeson'
+4. 
+5. SELECT description from sakila.film WHERE film_id = 100 
+6. SELECT * FROM sakila.film WHERE rating = 'R'
+7. SELECT * FROM sakila.film WHERE rating != 'R'
+9.
+10.
+11.
+12.
+13. SELECT AVG(length) FROM sakila.film
+14. SELECT fc.category_id, AVG(length) FROM sakila.film AS f INNER JOIN sakila.film_category AS fc ON f.film_id = fc.film_id GROUP BY fc.category_id
+15.
+16. SELECT film_id, title, length FROM sakila.film ORDER BY length DESC
+17. SELECT COUNT(film_id) FROM sakila.film WHERE release_year = 2010
+18.
+19.
+20.
+21. SELECT COUNT(DISTINCT country) FROM sakila.country
+22. SELECT name FROM sakila.language ORDER BY name 
